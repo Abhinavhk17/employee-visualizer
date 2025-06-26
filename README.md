@@ -1,59 +1,37 @@
-# EmployeeVisualizer
+# Employee Time Visualizer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+A modern Angular application that visualizes employee time entry data through interactive tables and pie charts. Built with Angular 18+ using standalone components for optimal performance and maintainability.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+- **Interactive Data Table**: Displays employee names, total hours worked, and percentages
+- **Smart Highlighting**: Automatically highlights employees with less than 100 hours in amber
+- **SVG Pie Chart**: Clean, responsive pie chart with thin borders for clear slice separation
+- **Color-Coded Legend**: Matching colors between chart slices and legend items
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Error Handling**: Robust error handling with retry functionality
+- **Mock Data Fallback**: Graceful fallback to sample data if API is unavailable
 
-```bash
-ng serve
-```
+## 📊 Demo
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The application fetches employee time data and presents it in two formats:
+1. **Sortable Table**: Employees sorted by total hours (descending)
+2. **Pie Chart**: Visual representation of time distribution percentages
 
-## Code scaffolding
+## 📸 Screenshots
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Main Dashboard
+![Employee Time Visualizer Dashboard](./screenshots/dashboard.png)
 
-```bash
-ng generate component component-name
-```
+### Interactive Table with Low Hours Highlighting
+![Employee Table with Highlighting](./screenshots/table-highlighting.png)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### SVG Pie Chart with Legend
+![Pie Chart Visualization](./screenshots/pie-chart.png)
 
-```bash
-ng generate --help
-```
+### Mobile Responsive View
+![Mobile View](./screenshots/mobile-view.png)
 
-## Building
+---
 
-To build the project run:
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

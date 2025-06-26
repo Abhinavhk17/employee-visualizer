@@ -1,0 +1,299 @@
+/**
+ * Employee Time Visualizer Styles
+ * Clean, responsive design with interactive elements
+ */
+
+/* Container and layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Loading and error states */
+.loading, .error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+}
+
+.loading p {
+  color: #3498db;
+}
+
+.error p {
+  color: #e74c3c;
+  background-color: #fdf2f2;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin-bottom: 1rem;
+}
+
+.retry-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background-color: #2563eb;
+}
+
+/* Content layout */
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Section styling */
+.table-section, .chart-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.table-section h2, .chart-section h2 {
+  color: #1f2937;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== TABLE STYLING ===== */
+/* Responsive table container with horizontal scroll on mobile */
+.table-container {
+  overflow-x: auto;
+}
+
+/* Clean, modern table with full width and collapsed borders */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+/* Table headers with uppercase styling and consistent spacing */
+.employee-table th {
+  background-color: #f8fafc;
+  color: #374151;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Table cell styling with consistent padding and borders */
+.employee-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1f2937;
+}
+
+/* Subtle hover effect for better table interactivity */
+.employee-table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* ===== LOW HOURS HIGHLIGHTING ===== */
+/* Conditional styling for employees with less than 100 hours */
+.employee-table tr.low-hours {
+  background-color: #fef3c7; /* Amber background */
+  border-left: 4px solid #f59e0b; /* Orange left border for emphasis */
+}
+
+/* Darker amber on hover for low-hours rows */
+.employee-table tr.low-hours:hover {
+  background-color: #fde68a;
+}
+
+/* Darker text color for better contrast on amber background */
+.employee-table tr.low-hours td {
+  color: #92400e;
+  font-weight: 500;
+}
+
+/* ===== CHART CONTAINER ===== */
+/* Flexbox container for centering pie chart and legend */
+.chart-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* ===== PIE CHART STYLING ===== */
+/* SVG pie chart with rounded corners and subtle shadow */
+.pie-chart-svg {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto 2rem auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border: 1px solid #ffffff; /* Thin white border around entire chart */
+}
+
+/* Smooth opacity transition for pie slice hover effects */
+.pie-chart-svg path {
+  transition: opacity 0.3s ease;
+}
+
+/* Interactive hover effect: slight fade and cursor pointer */
+.pie-chart-svg path:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* ===== CHART LEGEND ===== */
+/* Responsive grid layout for legend items */
+.chart-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 1rem;
+}
+
+/* Individual legend item styling with hover effects */
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+/* Interactive hover effect with lift and enhanced shadow */
+.legend-item:hover {
+  background-color: #f9fafb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Color indicator square matching pie chart slice colors */
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Legend text styling with proper typography */
+.legend-text {
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+
+/* ===== UTILITY CLASSES ===== */
+/* Placeholder styling for chart loading state */
+.chart-placeholder {
+  padding: 2rem;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  border: 2px dashed #d1d5db;
+  text-align: center;
+}
+
+/* Employee summary card styling (if used) */
+.employee-summary {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border-left: 3px solid #3b82f6;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Tablet and smaller desktop adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem; /* Reduced padding for smaller screens */
+  }
+  
+  header h1 {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+  
+  .table-section, .chart-section {
+    padding: 1.5rem; /* Reduced section padding */
+  }
+  
+  .employee-table th, .employee-table td {
+    padding: 0.75rem 0.5rem; /* Compressed table cells */
+    font-size: 0.875rem; /* Smaller text in table */
+  }
+  
+  .chart-container {
+    height: 300px; /* Fixed height for chart container */
+  }
+}
+
+/* Mobile phone adjustments */
+@media (max-width: 480px) {
+  .employee-table th, .employee-table td {
+    padding: 0.5rem 0.25rem; /* Further compressed table cells */
+    font-size: 0.8rem; /* Even smaller text on mobile */
+  }
+  
+  .chart-container {
+    height: 250px; /* Smaller chart on mobile */
+  }
+}
