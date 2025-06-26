@@ -1,4 +1,4 @@
-# Employee Time Visualizer
+# Employee Time Visualizer using Angular
 
 A modern Angular application that visualizes employee time entry data through interactive tables and pie charts. Built with Angular 18+ using standalone components for optimal performance and maintainability.
 
@@ -21,17 +21,12 @@ The application fetches employee time data and presents it in two formats:
 ## 📸 Screenshots
 
 ### Main Dashboard
-![Employee Time Visualizer Dashboard](./screenshots/dashboard.png)
+![Employee Time Visualizer Dashboard](./screenshots/Dashboard.png)
 
-### Interactive Table with Low Hours Highlighting
-![Employee Table with Highlighting](./screenshots/table-highlighting.png)
-
-### SVG Pie Chart with Legend
-![Pie Chart Visualization](./screenshots/pie-chart.png)
-
-### Mobile Responsive View
-![Mobile View](./screenshots/mobile-view.png)
+*The main dashboard showing both the employee hours table and interactive pie chart side by side*
 
 ---
+
+**Built with ❤️ using Angular**
 
 
