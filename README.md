@@ -27,6 +27,5 @@ The application fetches employee time data and presents it in two formats:
 
 ---
 
-**Built with ❤️ using Angular**
 
 
